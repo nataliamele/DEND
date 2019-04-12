@@ -117,8 +117,9 @@ def process_data(cur, conn, filepath, func):
 
 def main():
     """
-    Description: main function is executed first ones scipt wa slunched . It establishes and close connection to database, 
-    calls above function process_data,  and is it's arguemtns - process_song_file, process_log_file to process logs and populate database
+    Description: main function is executed first when scipt etl.py is lunched. It establishes and closes connection to database, 
+    calls above function process_data, and other as its arguemtns - process_song_file, process_log_file to process logs and 
+    populate data to database.
 
     Arguments:
         None
