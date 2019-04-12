@@ -57,9 +57,9 @@
 - <a href="https://www.postgresql.org/download/">Postgres</a></br>
 - <a href=""https://www.python.org/downloads/>Python</a>
 
-<p>After instalation completed, you need to create default data base "studentdb", user "student", password "student:to be able to establish connection to Postgres. </p>
+<p>After instalation completed, you need to create default data base "studentdb", user "student", password "student" to be able to establish connection to Postgres. </p>
 
-<p>You can find several scripts in the directory :
+<p>You can find following scripts in the directory :
   
 * etl.ipynb (Jupyter notebook file with sample ETL process)
 * etl.py (script which runs ETL, processing log files and transporting data to database)
@@ -67,11 +67,18 @@
 * create_tables.py (contains drop and create tables queries)
 
 </p>
+<p>Directory **\data** contains all log files</p>
 
 <h3>Steps:</h3> 
 
 1. In terminal(command line) run: <b> python create_tables.py </b>. This will create Sparkify database and tables. 
 2. In terminal run <b> python etl.py </b>. This will run ETL process, printing out details on processed log files. 
-3. Now you have you data organized in tables and you can query for different stats. Connecto to database from terminal with command: <b>psql -d sparkifydb -U student</b>
+3. Now you have you data organized in tables and you can query for different stats. Connecto to database from terminal with command: 
+
+> psql -d sparkifydb -U student
+
+Display 20 most active 'paid' users:
+
+> SELECT user_id, count(user_id) requests FROM songplay WHERE level = 'paid' GROUP BY user_id ORDER BY requests DESC LIMIT 20;
 
 
