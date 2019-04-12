@@ -28,10 +28,14 @@
 * gender, 
 * level
 </br>
-<b>songs</b>- songs in music database
-* song_id, title, artist_id, year, duration
+<b>songs</b> - songs in music database</br>
+* song_id, 
+* title, 
+* artist_id, 
+* year, 
+* duration
 </br>
-<b>artists</b> - artists in music database
+<b>artists</b> - artists in music database</br>
 * artist_id, 
 * name, 
 * location, 
