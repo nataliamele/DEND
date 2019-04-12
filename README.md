@@ -57,8 +57,8 @@ To acomplish this task we model STAR schema in Postgres DB and implement ETL pip
 <h3>How to run</h3>
 To run project localy you need PostgreSQL and Python installed. You can find appropriate package and installation guides here:
 
-- <a href="https://www.postgresql.org/download/">Postgres</a></br>
-- <a href=https://www.anaconda.com/distribution/">Anaconda for Python</a>
+- <a href="https://www.postgresql.org/download/">Postgres</a>
+- <a href="https://www.anaconda.com/distribution/">Anaconda for Python</a>
 
 We also going to need two libraries installed for our script - **Pandas** (to be able to read JSON file into dataframe object and perform operations on it) and **Psycopg** (to interract with database).
 
@@ -80,22 +80,20 @@ You can find following scripts in the directory :
 
 Also there is a directory **\data** which contains all log files in JSON format
 
-<h3>Steps:</h3> 
+<h3>Steps to run project and gather stats:</h3> 
 
-1. In terminal(command line) run: 
+1. In the Terminal(command line) run command: 
 > python create_tables.py 
 This will create Sparkify database and Fact and all Dimensions tables. 
-2. In terminal run 
+2. In the Terminal(command line) run command: 
 > python etl.py
 This will run ETL process, printing out details on processed log files. 
 3. Now you have you data organized in tables and you can query for different stats. Connecto to database from terminal with command: 
-
 > psql -d sparkifydb -U student
 
-Display 20 most active 'paid' users:
-
+For example, if you want to display 20 most active 'paid' users, run this query:
 > SELECT user_id, count(user_id) requests FROM songplay WHERE level = 'paid' GROUP BY user_id ORDER BY requests DESC LIMIT 20;
 
-What browser is most popular ?
+If you need information what browsers are most popular, run this query:
 > SELECT user_agent, count(user_agent) FROM songplay GROUP BY user_agent ORDER BY count(user_agent) DESC;
 
