@@ -51,7 +51,6 @@
 * month 
 * year 
 * weekday
-</br>
 
 <h3>How to run</h3>
 <p>To run project localy you need PostgreSQL and Python installed. You can find appropriate package and installation guides here: </p>
@@ -61,10 +60,12 @@
 <p>After instalation completed, you need to create default data base "studentdb", user "student", password "student:to be able to establish connection to Postgres. </p>
 
 <p>You can find several scripts in the directory :
+  
 * etl.ipynb (Jupyter notebook file with sample ETL process)
 * etl.py (script which runs ETL, processing log files and transporting data to database)
 * sql_queries.py (contains SQL queries to create tables, insert and select data to tables)
 * create_tables.py (contains drop and create tables queries)
+
 </p>
 
 <h3>Steps:</h3> 
