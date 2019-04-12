@@ -22,13 +22,29 @@
 <h3>Dimension Tables</h3>
 
 <b>users</b>  - users in the app
-* user_id, first_name, last_name, gender, level
+* user_id, 
+* first_name, 
+* last_name, 
+* gender, 
+* level
+</br>
 <b>songs</b>- songs in music database
 * song_id, title, artist_id, year, duration
+</br>
 <b>artists</b> - artists in music database
-artist_id, name, location, lattitude, longitude
+* artist_id, 
+* name, 
+* location, 
+* lattitude, 
+* longitude
 <b>time</b> - timestamps of records in songplays broken down into specific units
-* start_time, hour, day, week, month, year, weekday
+* start_time, 
+* hour, 
+* day, 
+* week, 
+* month, 
+* year, 
+* weekday
 
 
 <h3>How to run</h3>
