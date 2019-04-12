@@ -7,7 +7,9 @@ In this project we performed analyses for startup Sparkify to understand what so
 
 Sprakify shared 3 types of JSON log files, which contain information on user activity, songs, artists data.
 
-To acomplish this task we model STAR schema in Postgres DB and implement ETL pipeline to fetch data from logs.
+To acomplish this task we model STAR schema in Postgre SQL  and implement ETL pipeline script on Python 3 to fetch data from logs to tables created in Postgres.
+
+<h2>Databse design</h2>
 
 <h3>Fact Table </h3>
 
