@@ -55,7 +55,7 @@
 <h3>How to run</h3>
 <p>To run project localy you need PostgreSQL and Python installed. You can find appropriate package and installation guides here: </p>
 - <a href="https://www.postgresql.org/download/">Postgres</a></br>
-- <a href=""https://www.python.org/downloads/>Python</a>
+- <a href=https://www.anaconda.com/distribution/">Anaconda for Python</a>
 
 <p>After instalation completed, you need to create default data base "studentdb", user "student", password "student" to be able to establish connection to Postgres. </p>
 
