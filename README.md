@@ -81,4 +81,6 @@ Display 20 most active 'paid' users:
 
 > SELECT user_id, count(user_id) requests FROM songplay WHERE level = 'paid' GROUP BY user_id ORDER BY requests DESC LIMIT 20;
 
+What browser is most popular ?
+> SELECT user_agent, count(user_agent) FROM songplay GROUP BY user_agent ORDER BY count(user_agent) DESC;
 
