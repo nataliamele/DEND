@@ -8,10 +8,21 @@ time_table_drop = "DROP TABLE IF EXISTS time;"
 
 # CREATE TABLES
 
+# songplay_table_create = ("CREATE TABLE IF NOT EXISTS songplay (\
+#                         songplay_id SERIAL PRIMARY KEY, \
+#                         start_time TIMESTAMP REFERENCES time.start_time, \
+#                         user_id INT REFERENCES users.user_id, \
+#                         level VARCHAR, \
+#                         song_id VARCHAR(50) REFERENCES song.song_id, \
+#                         artist_id  VARCHAR(50) REFERENCES artist.artist_id, \
+#                         session_id INT, \
+#                         location VARCHAR, \
+#                         user_agent TEXT \
+#                         );") 
 songplay_table_create = ("CREATE TABLE IF NOT EXISTS songplay (\
                         songplay_id SERIAL PRIMARY KEY, \
-                        start_time TIMESTAMP, \
-                        user_id INT, \
+                        start_time TIMESTAMP NOT NULL, \
+                        user_id INT NOT NULL, \
                         level VARCHAR, \
                         song_id VARCHAR(50), \
                         artist_id  VARCHAR(50), \
@@ -54,7 +65,6 @@ time_table_create = ("CREATE TABLE IF NOT EXISTS time(\
                     year INT, \
                     weekday INT)\
                     ;")
-#1541106106796
 
 
 # INSERT RECORDS
@@ -64,7 +74,7 @@ songplay_table_insert = ("INSERT INTO songplay( \
                     VALUES (%s, %s, %s, %s, %s, %s, %s, %s)")
 
 user_table_insert = ("INSERT INTO users(user_id, first_name, last_name, gender, level) VALUES (%s, %s, %s, %s, %s) \
-                    ON CONFLICT (user_id) DO NOTHING")
+                    ON CONFLICT (user_id) DO UPDATE SET level=EXCLUDED.level")
 
 song_table_insert = ("INSERT INTO songs(song_id, title, artist_id, year, duration) VALUES (%s, %s, %s, %s, %s) \
                     ON CONFLICT (song_id) DO NOTHING;")
@@ -84,12 +94,8 @@ song_select = ("SELECT songs.song_id, artist.artist_id \
                 )
 
 
-# SONG PLAY ANALYSIS
-
-## How many songs matched : 
-
 
 # QUERY LISTS
 
-create_table_queries = [songplay_table_create, user_table_create, song_table_create, artist_table_create, time_table_create]
+create_table_queries = [user_table_create, song_table_create, artist_table_create, time_table_create, songplay_table_create ]
 drop_table_queries = [songplay_table_drop, user_table_drop, song_table_drop, artist_table_drop, time_table_drop]
