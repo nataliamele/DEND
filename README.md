@@ -69,6 +69,9 @@
 </p>
 
 <h3>Steps:</h3> 
+
 1. In terminal(command line) run: <b> python create_tables.py </b>. This will create Sparkify database and tables. 
 2. In terminal run <b> python etl.py </b>. This will run ETL process, printing out details on processed log files. 
 3. Now you have you data organized in tables and you can query for different stats. Connecto to database from terminal with command: <b>psql -d sparkifydb -U student</b>
+
+
