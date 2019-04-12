@@ -56,6 +56,13 @@
 <p>To run project localy you need PostgreSQL and Python installed. You can find appropriate package and installation guides here: </p>
 - <a href="https://www.postgresql.org/download/">Postgres</a></br>
 - <a href=https://www.anaconda.com/distribution/">Anaconda for Python</a>
+<p>We also going to need two libraries installed for our script - Pandas and Psycopg</p>
+
+To instal Pandas , run in Terminal:
+> conda install pandas
+
+To install Psycopg2:
+> pip install psycopg2
 
 <p>After instalation completed, you need to create default data base "studentdb", user "student", password "student" to be able to establish connection to Postgres. </p>
 
@@ -67,7 +74,7 @@
 * create_tables.py (contains drop and create tables queries)
 
 </p>
-<p>Directory **\data** contains all log files</p>
+<p>Also there is a directory <b>\data</b> which contains all log files in JSON format</p>
 
 <h3>Steps:</h3> 
 
